@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gigantes Island | Iloilo Travel Journal</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        .hero-image {
+            height: 90vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 0px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        .carousel-item video, .carousel-item img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Iloilo Travels</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Iloilo City</a></li>
@@ -29,27 +54,90 @@
         </div>
     </nav>
 
+    <section class="hero-image" style="background-image: url('images/gigantes_tour.jpg');">
+        <div class="overlay-text text-center">
+            <h1 class="fw-bold display-4">Gigantes Island</h1>
+            <p class="lead">Hidden paradise in Northern Iloilo — crystal waters, dramatic cliffs, and untouched island serenity.</p>
+        </div>
+    </section>
+
+    <section class="container py-5 text-center">
+        <h2 class="fw-bold mb-4">Island Adventure Awaits</h2>
+        <p class="lead">
+            Gigantes Island is where raw nature meets quiet escape. Limestone cliffs, turquoise lagoons, powdery sandbars, and seafood feasts — not crowded, just pure tropical peace and adventure.
+        </p>
+    </section>
+
     <section class="container py-5">
-        <div class="row g-4 align-items-center">
+        <h3 class="fw-bold mb-3 text-center">Pulupandan Island</h3>
+        <p class="text-center text-muted mb-4">
+            A tiny gem in the middle of the sea — just sand, a lone coconut tree, and peace. The perfect island fantasy made real.
+        </p>
 
-            <div class="col-md-6">
-                <img src="images/gigantes.jpg" class="img-fluid rounded shadow-sm" alt="Gigantes Island">
+        <div id="pulupandanCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video autoplay muted loop><source src="videos/gigantes.mp4" type="video/mp4"></video>
+                </div>
+                <div class="carousel-item"><img src="images/gigantes1.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/gigantes2.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/gigantes3.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/gigantes4.jpg" class="d-block w-100"></div>
             </div>
 
-            <div class="col-md-6">
-                <h2 class="fw-bold">Gigantes Island</h2>
-                <p class="lead">
-                    Raw, untouched paradise — that’s Gigantes. Crystal-clear waters, dramatic rock formations,
-                    and quiet hidden beaches that feel like you rented an island just for yourself.
-                </p>
+            <button class="carousel-control-prev" type="button" data-bs-target="#pulupandanCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pulupandanCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
 
-                <p>
-                    The vibe here? Peaceful and isolated — a slow escape from noise and crowds.
-                    Fresh seafood, island hopping, and unbelievably clear blue waters.
-                    It’s where time slows down and nature takes over everything.
-                </p>
+    <section class="container py-5">
+        <h3 class="fw-bold mb-3 text-center">Tangke Saltwater Lagoon</h3>
+        <p class="text-center text-muted mb-4">
+            A natural pool tucked between dramatic limestone cliffs — clear emerald water perfect for a refreshing dip. Feels like stepping into a secret fantasy world.
+        </p>
+
+        <div id="lagoonCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><video autoplay muted loop><source src="videos/lagoon.mp4" type="video/mp4"></video></div>
+                <div class="carousel-item"><img src="images/lagoon1.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/lagoon2.jpg" class="d-block w-100"></div>
             </div>
 
+            <button class="carousel-control-prev" type="button" data-bs-target="#lagoonCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#lagoonCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h3 class="fw-bold mb-3 text-center">Cabugao Gamay Island</h3>
+        <p class="text-center text-muted mb-4">
+            The postcard star of Gigantes — white sandbar, turquoise water, and iconic viewpoint. Calm sunrise, dreamy afternoons, breathtaking views everywhere.
+        </p>
+
+        <div id="cabugaoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><video autoplay muted loop><source src="videos/cabugao.mp4" type="video/mp4"></video></div>
+                <div class="carousel-item"><img src="images/cabugao1.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/cabugao2.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/cabugao3.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/cabugao4.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="images/cabugao5.jpg" class="d-block w-100"></div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#cabugaoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cabugaoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </section>
 
@@ -58,5 +146,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.onbeforeunload = function () { localStorage.setItem("scrollPos_" + location.pathname, window.scrollY); }
+        window.onload = function () { const p = localStorage.getItem("scrollPos_" + location.pathname); if (p) window.scrollTo(0, p); }
+    </script>
+
 </body>
 </html>
