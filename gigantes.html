@@ -6,9 +6,11 @@
     <title>Gigantes Island | Iloilo Travel Journal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
     <style>
         body {
             padding-top: 70px;
+            font-family: "Poppins", sans-serif;
         }
 
         .hero-image {
@@ -23,14 +25,31 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
-            text-shadow: 0px 2px 5px rgba(0,0,0,0.7);
+            color: #fff;
+            text-shadow: 0px 3px 6px rgba(0,0,0,0.7);
+        }
+
+        section p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
         }
 
         .carousel-item video, .carousel-item img {
             width: 100%;
             height: 450px;
             object-fit: cover;
+            border-radius: 10px;
+        }
+
+        @media(max-width: 768px) {
+            .carousel-item video, .carousel-item img {
+                height: 300px;
+            }
+
+            .hero-image {
+                height: 70vh;
+            }
         }
     </style>
 </head>
@@ -54,35 +73,44 @@
         </div>
     </nav>
 
-    <section class="hero-image" style="background-image: url('images/gigantes_tour.jpg');">
+    <section class="hero-image" style="background-image:url('images/gigantes_tour.jpg')">
         <div class="overlay-text text-center">
             <h1 class="fw-bold display-4">Gigantes Island</h1>
-            <p class="lead">Hidden paradise in Northern Iloilo — crystal waters, dramatic cliffs, and untouched island serenity.</p>
+            <p class="lead">Raw island beauty — dramatic cliffs, serene lagoons, and crystal-clear dreams.</p>
         </div>
     </section>
 
     <section class="container py-5 text-center">
-        <h2 class="fw-bold mb-4">Island Adventure Awaits</h2>
+        <h2 class="fw-bold mb-3">Northern Iloilo's Hidden Treasure</h2>
         <p class="lead">
-            Gigantes Island is where raw nature meets quiet escape. Limestone cliffs, turquoise lagoons, powdery sandbars, and seafood feasts — not crowded, just pure tropical peace and adventure.
+            Imagine sailing into a world where limestone giants rise over turquoise seas — where time slows, waves sparkle,
+            and seafood feasts welcome every traveler. That's Gigantes: untouched, enchanting, and unforgettable.
         </p>
     </section>
 
+    <!-- Pulupandan Island -->
     <section class="container py-5">
-        <h3 class="fw-bold mb-3 text-center">Pulupandan Island</h3>
+        <h3 class="fw-bold text-center mb-2">Pulupandan Island</h3>
         <p class="text-center text-muted mb-4">
-            A tiny gem in the middle of the sea — just sand, a lone coconut tree, and peace. The perfect island fantasy made real.
+            A tiny sandcastle in the middle of a vast sea — quiet, dreamy, and kissed by gentle waves.
+            One coconut tree, sparkling waters, endless sky. The ultimate escape for soul-deep calm.
         </p>
 
         <div id="pulupandanCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#pulupandanCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#pulupandanCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#pulupandanCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#pulupandanCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#pulupandanCarousel" data-bs-slide-to="4"></button>
+            </div>
+
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <video autoplay muted loop><source src="videos/gigantes.mp4" type="video/mp4"></video>
-                </div>
-                <div class="carousel-item"><img src="images/gigantes1.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/gigantes2.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/gigantes3.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/gigantes4.jpg" class="d-block w-100"></div>
+                <div class="carousel-item active"><video autoplay muted loop><source src="videos/gigantes.mp4"></video></div>
+                <div class="carousel-item"><img src="images/gigantes1.jpg"></div>
+                <div class="carousel-item"><img src="images/gigantes2.jpg"></div>
+                <div class="carousel-item"><img src="images/gigantes3.jpg"></div>
+                <div class="carousel-item"><img src="images/gigantes4.jpg"></div>
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#pulupandanCarousel" data-bs-slide="prev">
@@ -94,17 +122,26 @@
         </div>
     </section>
 
+    <!-- Lagoon -->
     <section class="container py-5">
-        <h3 class="fw-bold mb-3 text-center">Tangke Saltwater Lagoon</h3>
+        <h3 class="fw-bold text-center mb-2">Tangke Saltwater Lagoon</h3>
         <p class="text-center text-muted mb-4">
-            A natural pool tucked between dramatic limestone cliffs — clear emerald water perfect for a refreshing dip. Feels like stepping into a secret fantasy world.
+            A secret emerald pool surrounded by towering cliffs — nature’s hidden bath.
+            Calm waters, dancing sunlight, and a magical stillness that feels unreal.
+            Dip, float, breathe, repeat.
         </p>
 
         <div id="lagoonCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#lagoonCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#lagoonCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#lagoonCarousel" data-bs-slide-to="2"></button>
+            </div>
+
             <div class="carousel-inner">
-                <div class="carousel-item active"><video autoplay muted loop><source src="videos/lagoon.mp4" type="video/mp4"></video></div>
-                <div class="carousel-item"><img src="images/lagoon1.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/lagoon2.jpg" class="d-block w-100"></div>
+                <div class="carousel-item active"><video autoplay muted loop><source src="videos/lagoon.mp4"></video></div>
+                <div class="carousel-item"><img src="images/lagoon1.jpg"></div>
+                <div class="carousel-item"><img src="images/lagoon2.jpg"></div>
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#lagoonCarousel" data-bs-slide="prev">
@@ -116,28 +153,36 @@
         </div>
     </section>
 
+    <!-- Cabugao -->
     <section class="container py-5">
-        <h3 class="fw-bold mb-3 text-center">Cabugao Gamay Island</h3>
+        <h3 class="fw-bold text-center mb-2">Cabugao Gamay Island</h3>
         <p class="text-center text-muted mb-4">
-            The postcard star of Gigantes — white sandbar, turquoise water, and iconic viewpoint. Calm sunrise, dreamy afternoons, breathtaking views everywhere.
+            The crown jewel of Gigantes — iconic viewpoints, sweeping sandbars,
+            and that postcard moment you’ll remember forever.
+            Climb, gaze, breathe in the island magic.
         </p>
 
         <div id="cabugaoCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active"><video autoplay muted loop><source src="videos/cabugao.mp4" type="video/mp4"></video></div>
-                <div class="carousel-item"><img src="images/cabugao1.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/cabugao2.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/cabugao3.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/cabugao4.jpg" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="images/cabugao5.jpg" class="d-block w-100"></div>
+            <div class="carousel-indicators">
+                <button class="active" data-bs-target="#cabugaoCarousel" data-bs-slide-to="0"></button>
+                <button data-bs-target="#cabugaoCarousel" data-bs-slide-to="1"></button>
+                <button data-bs-target="#cabugaoCarousel" data-bs-slide-to="2"></button>
+                <button data-bs-target="#cabugaoCarousel" data-bs-slide-to="3"></button>
+                <button data-bs-target="#cabugaoCarousel" data-bs-slide-to="4"></button>
+                <button data-bs-target="#cabugaoCarousel" data-bs-slide-to="5"></button>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#cabugaoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#cabugaoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <div class="carousel-inner">
+                <div class="carousel-item active"><video autoplay muted loop><source src="videos/cabugao.mp4"></video></div>
+                <div class="carousel-item"><img src="images/cabugao1.jpg"></div>
+                <div class="carousel-item"><img src="images/cabugao2.jpg"></div>
+                <div class="carousel-item"><img src="images/cabugao3.jpg"></div>
+                <div class="carousel-item"><img src="images/cabugao4.jpg"></div>
+                <div class="carousel-item"><img src="images/cabugao5.jpg"></div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#cabugaoCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cabugaoCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
         </div>
     </section>
 
@@ -148,9 +193,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        window.onbeforeunload = function () { localStorage.setItem("scrollPos_" + location.pathname, window.scrollY); }
-        window.onload = function () { const p = localStorage.getItem("scrollPos_" + location.pathname); if (p) window.scrollTo(0, p); }
+        window.onbeforeunload = () => localStorage.setItem("scrollPos_" + location.pathname, window.scrollY);
+        window.onload = () => { let p = localStorage.getItem("scrollPos_" + location.pathname); if (p) window.scrollTo(0, p); }
     </script>
-
 </body>
 </html>
